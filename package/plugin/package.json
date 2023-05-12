@@ -1,7 +1,7 @@
 {
-  "name": "umi-plugin-keepalive-tabs",
+  "name": "umi-plugin-keepalive-history-no-lang",
   "author": "876809592@qq.com",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
   "scripts": {
@@ -16,9 +16,9 @@
     "README.md"
   ],
   "devDependencies": {
-    "father": "^4.1.8",
-    "umi": "^4.0.67",
     "@types/node": "^18.15.11",
-    "typescript": "^5.0.3"
+    "father": "^4.1.9",
+    "typescript": "^5.0.3",
+    "umi": "^4.0.67"
   }
 }

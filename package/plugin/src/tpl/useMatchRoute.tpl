@@ -1,4 +1,4 @@
-import { IRoute, history, useAppData, useIntl, useLocation, useOutlet, useSelectedRoutes } from 'umi';
+import { IRoute, history, useAppData, useLocation, useOutlet, useSelectedRoutes } from 'umi';
 import { useEffect, useState } from 'react';
 
 type CustomIRoute = IRoute & {
@@ -22,8 +22,7 @@ export function useMatchRoute() {
   const { routes } = useAppData();
   // 获取当前url
   const { pathname } = useLocation();
-  // 国际化方法，因为默认菜单做了国际化，所以需要把菜单转成中文
-  const { formatMessage } = useIntl();
+
 
   const [matchRoute, setMatchRoute] = useState<MatchRouteType | undefined>();
 
@@ -43,7 +42,7 @@ export function useMatchRoute() {
 
     names.push(lastRoute.route.name);
 
-    return formatMessage({ id: names.join('.') });
+    return lastRoute.route.name;
   }
 
   // 监听pathname变了，说明路由有变化，重新匹配，返回新路由信息
